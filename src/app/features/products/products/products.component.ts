@@ -19,13 +19,13 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getUsers();
+    this.getProducts();
   }
 
   /**
-   * Obtiene listado de usuarios
+   * Obtiene listado de productos
    */
-   getUsers(): void {
+  getProducts(): void {
     this.isLoading = true;
     this.productService.getProducts().then(res => {
       console.log(res);

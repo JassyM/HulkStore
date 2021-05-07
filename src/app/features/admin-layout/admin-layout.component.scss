@@ -10,6 +10,10 @@
 mat-sidenav {
   width: 15%;
   min-width: 150px;
+  & mat-toolbar {
+    background-color: #198754;
+    color: white;
+  }
 }
 
 mat-sidenav-content > mat-toolbar {

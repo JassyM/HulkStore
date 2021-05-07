@@ -8,4 +8,6 @@ export interface Purchase {
   initialUnits: number;
   currentUnits: number;
   product: Product;
+  priceUnitary: number;
+  totalCost: number;
 }

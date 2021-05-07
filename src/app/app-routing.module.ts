@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: '/', pathMatch: 'full'
+    path: '', redirectTo: '/productos', pathMatch: 'full'
   },
   {
     path: '',
@@ -14,7 +14,7 @@ const routes: Routes = [
     loadChildren: () => import('./features/features.module').then( m => m.FeaturesModule)
   },
   {
-    path: '**', redirectTo: '/', pathMatch: 'full'
+    path: '**', redirectTo: '/productos', pathMatch: 'full'
   }
 ];
 

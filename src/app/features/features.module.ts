@@ -8,6 +8,8 @@ import { FeaturesRoutingModule } from './features-routing.module';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ProductService } from '../core/services/product.service';
+import { NotificationService } from '../core/services/notification.service';
 
 @NgModule({
   declarations: [AdminLayoutComponent],
@@ -20,6 +22,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule
-  ]
+  ],
+  /* providers: [
+    ProductService,
+    NotificationService
+  ] */
 })
 export class FeaturesModule { }
