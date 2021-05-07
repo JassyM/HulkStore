@@ -1,0 +1,22 @@
+<mat-sidenav-container class="admin-main-container">
+  <mat-sidenav mode="side" opened>
+    <mat-toolbar>Hulk Store</mat-toolbar>
+    <mat-nav-list>
+      <!-- <a mat-list-item routerLink="/admin">Home</a> -->
+      <a mat-list-item routerLink="/productos">Productos</a>
+      <a mat-list-item routerLink="/compras">Compras</a>
+      <a mat-list-item routerLink="/ventas">Ventas</a>
+      <a mat-list-item routerLink="/inventario">Inventario</a>      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item >Cerrar sesión</a>
+      </mat-nav-list>
+    </mat-toolbar>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

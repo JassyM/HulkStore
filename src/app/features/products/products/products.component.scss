@@ -1,0 +1,14 @@
+.card-title {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.addItem {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+
+  & > button {
+    margin-right: 2rem;
+  }
+}

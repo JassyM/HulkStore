@@ -1,0 +1,63 @@
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title text-success">Registrar Compra</h1>
+    <div class="addItem">
+      <a type="button" class="btn btn-success" (click)="openModal(addProduct)" title="Agregar Producto">
+        Agregar Producto
+      </a>
+    </div>
+    <ng-template #addProduct>
+      <h2 matDialogTitle>Agregar Producto</h2>
+      <mat-dialog-content>
+        <form [formGroup]="formAddProduct" (ngSubmit)="addProduct()">
+          <div class="modal-body row">
+            <div class="mb-3 col">
+              <label for="units" class="form-label">Unidades</label>
+              <input formControlName="units" type="number" class="form-control" id="units">
+            </div>
+            <div class="form-group col-md-12">
+            </div>
+            <!-- <div class="mb-3">
+              <label for="unites" class="form-label">Unidades</label>
+              <input type="date" class="form-control" id="unites">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-success"
+              mat-raised-button
+              type="submit">
+              Agregar
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
+          </div>
+        </form>
+      </mat-dialog-content>
+      <mat-dialog-actions>
+       
+      </mat-dialog-actions>
+    </ng-template>
+    <form>
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="purchaseDate" class="form-label">Fecha de compra</label>
+          <input type="date" class="form-control" id="purchaseDate">
+        </div>
+        <div class="mb-3 col">
+          <label for="reference" class="form-label">Referencia o factura</label>
+          <input type="text" class="form-control" id="reference">
+        </div>
+      </div>
+      <div class="formButtons">
+        <button type="submit" class="btn btn-success">Registrar</button>
+        <button class="btn btn-outline-danger">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

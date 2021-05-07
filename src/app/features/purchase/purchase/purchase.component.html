@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title text-success">Compras</h1>
+    <div class="addItem">
+      <a type="button" class="btn btn-success" routerLink="registrar">Agregar compra</a>
+      <a type="button" class="btn btn-success">Devolución compra</a>
+    </div>
+    <div *ngIf="!isLoading && purchases.length > 0">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Ref/Factura</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Fecha de compra</th>
+            <th scope="col">Fecha actualización</th>
+            <th scope="col">Unidades Iniciales</th>
+            <th scope="col">Unidades Actuales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let purchase of purchases">
+            <td>{{ purchase.reference }}</td>
+            <td>{{ purchase.product.name }}</td>
+            <td>{{ purchase.purchaseDate }}</td>
+            <td>{{ purchase.updateDate }}</td>
+            <td>{{ purchase.initialUnits }}</td>
+            <td>{{ purchase.currentUnits }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="card-text text-center" *ngIf="!isLoading && purchases.length === 0">
+      No hay compras registradas
+    </p>
+  </div>
+</div>

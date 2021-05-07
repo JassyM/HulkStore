@@ -1,0 +1,41 @@
+<div class="login-box card bg-light shadow p-3 mb-5 rounded border-0">
+  <div class="card-body px-lg-5">
+    <div class="text-center text-muted mb-4">
+      <span class="card-title text-center text-success">
+        <h2>Hulk Store</h2>
+        <small>
+          <p>Sistema de inventario</p>
+        </small>
+      </span>
+      <h5 class="card-subtitle text-center text-success mt-4">Inicio de sesión</h5>
+    </div>
+    <form [formGroup]="loginForm" class="form-horizontal form-material" (ngSubmit)="onLogin()" autocomplete="off">
+      <div class="form-group mb-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="material-icons" title="Correo electrónico">email</i></span>
+          </div>
+          <input formControlName="email" class="form-control" placeholder="Correo electrónico" type="email" [ngClass]="{ 'is-invalid': loginForm.get('email').hasError('required') }" title="Correo electrónico" name="email" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="material-icons" title="Contraseña">vpn_key</i></span>
+          </div>
+          <input #passwordInput formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': loginForm.get('password').hasError('required') }" placeholder="Contraseña" type="password" title="Contraseña" name="password" required>
+        </div>
+      </div>
+      <div class="text-center">
+        <button mat-raised-button type="submit" class="btn btn-success my-2" title="Iniciar sesión" [disabled]="!loginForm.valid">
+          Iniciar sesión
+        </button>
+      </div>
+    </form>
+    <div class="row mt-2">
+      <div class="col-12 text-center">
+        <a [routerLink]="['/']" id="forgotPassword" class="text-success" title="Olvidé mi contraseña">Olvidé mi contraseña</a>
+      </div>
+    </div>
+  </div>
+</div>
